@@ -5,6 +5,12 @@ const timerDisplay = document.getElementById('timer');
 const startBtn = document.getElementById('start');
 const pauseBtn = document.getElementById('pause');
 const resetBtn= document.getElementById('reset');
+const alarmSound = document.getElementById('alarm-sound');
+
+
+if ("Notification" in window && Notification.permission !== "granted") {
+    Notification.requestPermission();
+}
 
 function updateDisplay()
 {
@@ -23,12 +29,20 @@ function startTimer(){
             time--;
             updateDisplay();
         }
-        else{
+        else {
             clearInterval(timerInterval);
             timerInterval = null;
-            alert("Time's up!");
             startBtn.classList.remove('active');
             timerDisplay.setAttribute('contenteditable', 'true');
+
+            // Play sound
+            alarmSound.currentTime = 0;
+            alarmSound.play();
+
+            // Show notification
+            showNotification("Pomodoro Finished!", "Time for a break 🍅");
+
+            alert("Time's up!");
         }
     }, 1000);
 }
@@ -48,6 +62,13 @@ function resetTimer() {
     pauseBtn.classList.remove('active');
     timerDisplay.setAttribute('contenteditable', 'true');
 }
+
+function showNotification(title, message) {
+    if (Notification.permission === "granted") {
+        new Notification(title, { body: message, icon: "imgs/tomatostalk.png" }); // icon optional
+    }
+}
+
 
 function handleManualTimeInput() {
     const input = timerDisplay.textContent.trim();
