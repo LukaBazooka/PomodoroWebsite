@@ -5,6 +5,8 @@ const timerDisplay = document.getElementById('timer');
 const startBtn = document.getElementById('start');
 const pauseBtn = document.getElementById('pause');
 const resetBtn= document.getElementById('reset');
+const workBtn = document.getElementById('workbtn');
+const restBtn = document.getElementById('restbtn');
 const alarmSound = document.getElementById('alarm-sound');
 
 
@@ -57,6 +59,24 @@ function pauseTimer() {
 function resetTimer() {
     pauseTimer();
     time = 25 * 60;
+    updateDisplay();
+    startBtn.classList.remove('active');
+    pauseBtn.classList.remove('active');
+    timerDisplay.setAttribute('contenteditable', 'true');
+}
+
+function workTimer() {
+    pauseTimer(); 
+    time = 25 * 60;
+    updateDisplay();
+    startBtn.classList.remove('active');
+    pauseBtn.classList.remove('active');
+    timerDisplay.setAttribute('contenteditable', 'true');
+}
+
+function restTimer() {
+    pauseTimer(); 
+    time = 5 * 60;
     updateDisplay();
     startBtn.classList.remove('active');
     pauseBtn.classList.remove('active');
@@ -122,5 +142,7 @@ timerDisplay.addEventListener('blur', handleManualTimeInput);
 startBtn.addEventListener('click', startTimer);
 pauseBtn.addEventListener('click', pauseTimer);
 resetBtn.addEventListener('click', resetTimer);
+workBtn.addEventListener('click', workTimer);
+restBtn.addEventListener('click', restTimer);
 
 updateDisplay(); 

@@ -12,7 +12,14 @@ h1 {
     font-weight: bold;
     color:#f06543;
 }
-
+.timercontainer {
+    padding-top: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+}
 /* TOMATO */
 .container {
     background: #f06543;
@@ -148,6 +155,53 @@ h1 {
 #reset:hover {background-color: #046944}
 
 #reset:active {
+  background-color: #02492f;
+  box-shadow: 0 5px #011f14;
+  transform: translateY(4px);
+}
+
+#workbtn {
+  font-family: 'DynaPuff', sans-serif;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #e0dfd5;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #02492f;
+}
+
+#workbtn:hover {background-color: #046944}
+
+#workbtn:active {
+  background-color: #02492f;
+  box-shadow: 0 5px #011f14;
+  transform: translateY(4px);
+}
+#restbtn {
+  font-family: 'DynaPuff', sans-serif;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #e0dfd5;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #02492f;
+}
+
+#restbtn:hover {background-color: #046944}
+
+#restbtn:active {
   background-color: #02492f;
   box-shadow: 0 5px #011f14;
   transform: translateY(4px);

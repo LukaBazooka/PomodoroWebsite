@@ -10,6 +10,12 @@
     <body>
         <audio id="alarm-sound" src="sounds/ring.mp3" preload="auto"></audio>
         <h1>Pomodoro Timer</h1>
+        <div class="timercontainer">
+            <div class="buttons">
+                <button id="workbtn">Work</button>
+                <button id="restbtn">Rest</button>
+            </div>
+        </div>
         <img src="imgs/tomatostalk.png" alt="Tomato Stalk" class="tomato-stalk">
         <div class="container">
             <div id="timer" contenteditable="true">25:00</div>
@@ -19,6 +25,7 @@
                 <button id="reset">Reset</button>
             </div>
         </div>
+
         <script src="script.js"></script>
     </body>
 </html>
