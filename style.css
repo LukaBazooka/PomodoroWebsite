@@ -1,19 +1,23 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'DynaPuff', sans-serif;
     text-align: center;
     background-color: #e0dfd5;
     padding-top: 100px;
 }
 
 h1 {
+    font-family: 'DynaPuff', sans-serif;
     margin-bottom: 30px;
-    font-size: 28px;
+    font-size: 36px;
+    font-weight: bold;
+    color:#f06543;
 }
 
+/* TOMATO */
 .container {
     background: #f06543;
-    width: 400px;
-    height: 400px;
+    width: 475px;
+    height: 475px;
     border-radius: 50%;
     display: flex;
     flex-direction: column;
@@ -21,11 +25,27 @@ h1 {
     justify-content: center;
     margin: auto;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    font-family: sans-serif;
+    font-family: 'DynaPuff', sans-serif;
     text-align: center;
     gap: 20px;
-    padding: 20px;
+    position: relative; 
+    overflow: hidden;   
 }
+
+/*shine effect*/
+.container::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.4), transparent 60%);
+    border-radius: 50%;
+    pointer-events: none; 
+    transform: rotate(-20deg);
+}
+
 
 .buttons {
     display: flex;
@@ -38,6 +58,12 @@ h1 {
   font-size: 60px;
   margin: 20px 0;
   color: #e0dfd5;
+  background: #04AA6D;
+  padding: 15px 25px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 9px #02492f;
+  font-family: 'DynaPuff', sans-serif;
 }
 
 #start {
@@ -53,17 +79,20 @@ h1 {
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #02492f;
+  font-family: 'DynaPuff', sans-serif;
 }
 
 #start:hover {background-color: #046944}
 
-#start:active {
+#start.active {
   background-color: #02492f;
   box-shadow: 0 5px #011f14;
   transform: translateY(4px);
 }
 
+
 #pause {
+  font-family: 'DynaPuff', sans-serif;
   display: inline-block;
   padding: 15px 25px;
   font-size: 24px;
@@ -71,22 +100,23 @@ h1 {
   text-align: center;
   text-decoration: none;
   outline: none;
-  color: #fff;
+  color: #e0dfd5;
   background-color: #04AA6D;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 9px #999;
+  box-shadow: 0 9px #02492f;
 }
 
-#pause:hover {background-color: #3e8e41}
+#pause:hover {background-color: #046944}
 
-#pause:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
+#pause.active {
+  background-color: #02492f;
+  box-shadow: 0 5px #011f14;
   transform: translateY(4px);
 }
 
 #reset {
+  font-family: 'DynaPuff', sans-serif;
   display: inline-block;
   padding: 15px 25px;
   font-size: 24px;
@@ -94,17 +124,17 @@ h1 {
   text-align: center;
   text-decoration: none;
   outline: none;
-  color: #fff;
+  color: #e0dfd5;
   background-color: #04AA6D;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 9px #999;
+  box-shadow: 0 9px #02492f;
 }
 
-#reset:hover {background-color: #3e8e41}
+#reset:hover {background-color: #046944}
 
 #reset:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
+  background-color: #02492f;
+  box-shadow: 0 5px #011f14;
   transform: translateY(4px);
 }

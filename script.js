@@ -15,6 +15,8 @@ function updateDisplay()
 
 function startTimer(){
     if(timerInterval) return;
+    startBtn.classList.add('active');
+    pauseBtn.classList.remove('active');
     timerInterval = setInterval(() => {
         if(time > 0) {
             time--;
@@ -24,6 +26,7 @@ function startTimer(){
             clearInterval(timerInterval);
             timerInterval = null;
             alert("Time's up!");
+            startBtn.classList.remove('active');
         }
     }, 1000);
 }
@@ -31,12 +34,16 @@ function startTimer(){
 function pauseTimer() {
     clearInterval(timerInterval);
     timerInterval = null;
+    startBtn.classList.remove('active');
+    pauseBtn.classList.add('active');
 }
 
 function resetTimer() {
     pauseTimer();
     time = 25 * 60;
     updateDisplay();
+    startBtn.classList.remove('active');
+    pauseBtn.classList.remove('active');
 }
 
 startBtn.addEventListener('click', startTimer);
