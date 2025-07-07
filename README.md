@@ -1,6 +1,6 @@
 # 🍅 Pomodoro Timer
 
-A playful and functional **Pomodoro timer** built with **HTML, CSS, and JavaScript** — inspired by the shape and color of a tomato, featuring custom styling, animations, and a fun user experience. Hosted live on **Vercel**.
+A playful and functional **Pomodoro timer** built with **HTML, CSS, and JavaScript** — inspired by the shape and color of a tomato, featuring custom styling, animations, and a fun user experience. Hosted live on **Vercel**. I built this timer because I was already using an online timer to help me with my studying and learning, so why not make my own!
 
 ## 🚀 Live Demo
 

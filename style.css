@@ -73,6 +73,13 @@ h1 {
   font-family: 'DynaPuff', sans-serif;
 }
 
+#timer[contenteditable="true"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #04AA6D;
+  background-color: #056c4b;
+  cursor: text;
+}
+
 #start {
   display: inline-block;
   padding: 15px 25px;
